@@ -12,6 +12,13 @@ const App = () => {
             <p key={item.id}>
               {item.id}:{item.userName}
               <button onClick={() => listStore.deleteName(item.id)}>X</button>
+              <button
+                onClick={() =>
+                  listStore.editName(item.id, userName, setUserName)
+                }
+              >
+                Edit
+              </button>
             </p>
           );
         })}
